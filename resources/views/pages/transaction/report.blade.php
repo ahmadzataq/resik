@@ -27,14 +27,19 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered" id="transactionReport">
-                            <thead>                                 
+                            <thead>
                                 <tr>
                                     <th class="text-center">
                                     #
                                     </th>
                                     <th>Kode Transaksi</th>
+                                    <th>Karyawan</th>
                                     <th>Pelanggan</th>
+                                    <th>Sub Total</th>
+                                    <th>Diskon</th>
                                     <th>Total</th>
+                                    <th>Dibayar</th>
+                                    <th>Kembalian</th>
                                     <th>Tanggal</th>
                                 </tr>
                             </thead>
@@ -43,8 +48,13 @@
                                     <tr>
                                         <td class="text-center">{{ $index + 1 }}</td>
                                         <td>{{ $item->transaction_code }}</td>
+                                        <td>{{ ucwords($item->user->name) }}</td>
                                         <td>{{ $item->customer->name }}</td>
+                                        <td>{{ number_format($item->sub_total, 0,',',',')}}</td>
+                                        <td>{{ $item->discount }}%</td>
                                         <td>{{ number_format($item->grand_total, 0,',',',') }}</td>
+                                        <td>{{ number_format($item->paid, 0,',',',') }}</td>
+                                        <td>{{ number_format($item->change, 0,',',',') }}</td>
                                         <td>{{ date('d-m-Y', strtotime($item->created_at)) }}</td>
                                     </tr>
                                 @empty

@@ -26,7 +26,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('change')->nullable();
             $table->boolean('valid');
             $table->timestamps();
-            
+
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('customer_id')->references('id')->on('customers');
             $table->foreign('coupon_id')->references('id')->on('coupons');
@@ -43,3 +43,4 @@ class CreateTransactionsTable extends Migration
         Schema::dropIfExists('transactions');
     }
 }
+
