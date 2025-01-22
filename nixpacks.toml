@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["php74", "composer"]
+nixPkgs = ["php72", "composer"]
 
 [variables]
-PHP_VERSION = "7.4"
+PHP_VERSION = "7.2"
