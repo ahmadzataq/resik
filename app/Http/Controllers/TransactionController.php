@@ -31,14 +31,9 @@ class TransactionController extends Controller
             'customer'
         ])->where('valid', TRUE)->get();
 
-        $categories = Transaction::with(relations: [
-            'product'
-        ])->where(column: 'valid', operator: TRUE)->get();
-
         return view('pages.transaction.index', [
             'title' => $title,
             'items' => $items,
-            'categories' => $categories
         ]);
     }
 
@@ -49,6 +44,7 @@ class TransactionController extends Controller
      */
     public function create($transactionCode)
     {
+        
         if (is_null($transactionCode)) {
             abort(404);
         }

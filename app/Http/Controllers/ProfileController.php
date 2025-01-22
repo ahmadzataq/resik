@@ -104,7 +104,7 @@ class ProfileController extends Controller
         }else{
             $data = $request->except('password');
         }
-        
+
         if ($photo){
             $data['photo'] = $photo->store(
                 'assets/user', 'public'
