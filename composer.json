@@ -17,10 +17,12 @@
         "laravel/ui": "^2.1",
         "brick/math": "0.9.*",
     "psr/log": "1.0.*",
-    "ramsey/uuid": "^3.0 || ^4.0",
-    "symfony/console": "^5.0",
-    "symfony/string": "^5.0",
-    "symfony/event-dispatcher": "^5.0"
+    "ramsey/uuid": "^3.9",
+    "symfony/css-selector": "^5.4",
+    "symfony/deprecation-contracts": "^2.5",
+    "symfony/event-dispatcher-contracts": "^2.5",
+    "symfony/translation": "^5.4",
+    "symfony/service-contracts": "^2.5"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
