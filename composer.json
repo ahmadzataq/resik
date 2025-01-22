@@ -18,7 +18,9 @@
         "brick/math": "0.9.*",
     "psr/log": "1.0.*",
     "ramsey/uuid": "^3.0 || ^4.0",
-    "symfony/*": "^5.0"
+    "symfony/console": "^5.0",
+    "symfony/string": "^5.0",
+    "symfony/event-dispatcher": "^5.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
